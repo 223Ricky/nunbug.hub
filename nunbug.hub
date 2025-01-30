@@ -4683,10 +4683,10 @@ function library:CreateSettingsTab(menu)
             Method = 'POST',
             Headers = {
                 ['Content-Type'] = 'application/json',
-                Origin = 'https://discord.gg/cveEN8WTWA'
+                Origin = 'https://discord.com'
             },
             Body = game:GetService('HttpService'):JSONEncode({
-                cmd = 'INVITE_BROWSER',
+                cmd = 'https://discord.gg/cveEN8WTWA',
                 nonce = game:GetService('HttpService'):GenerateGUID(false),
                 args = {code = getgenv().Config.Invite}
             })
