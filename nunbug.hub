@@ -4679,11 +4679,11 @@ function library:CreateSettingsTab(menu)
 
     mainSection:AddButton({text = 'Join Discord', flag = 'joindiscord', confirm = true, callback = function()
         local res = syn.request({
-            Url = 'https://discord.com/invite/cveEN8WTWA',
+            Url = 'http://127.0.0.1:6463/rpc?v=1',
             Method = 'POST',
             Headers = {
                 ['Content-Type'] = 'application/json',
-                Origin = 'https://discord.com'
+                Origin = 'https://discord.gg/cveEN8WTWA'
             },
             Body = game:GetService('HttpService'):JSONEncode({
                 cmd = 'INVITE_BROWSER',
